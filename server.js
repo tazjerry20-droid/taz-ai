@@ -10,7 +10,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = express();
 app.use(helmet({ contentSecurityPolicy: false }));
 app.use(express.json({ limit: "8mb" }));
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(__dirname));
 app.use("/api/", rateLimit({ windowMs: 60_000, limit: 25, standardHeaders: true, legacyHeaders: false }));
 
 app.get("/api/status", (_req, res) => {
