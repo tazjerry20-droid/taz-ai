@@ -1,0 +1,10 @@
+{
+  "name": "TAZ AI",
+  "short_name": "TAZ AI",
+  "description": "Your all-in-one AI assistant",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#080b16",
+  "theme_color": "#080b16",
+  "icons": [{"src":"/icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}

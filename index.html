@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#080b16">
+  <meta name="description" content="TAZ AI — your all-in-one AI assistant">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <title>TAZ AI</title>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand"><div class="brand-mark">T</div><div><b>TAZ AI</b><small>YOUR AI WORKSPACE</small></div></div>
+      <button class="new-chat" id="newChat">＋ <span>New chat</span></button>
+      <div class="side-label">WORKSPACE</div>
+      <button class="nav-item active" data-mode="chat">✦ <span>AI Assistant</span></button>
+      <button class="nav-item" data-mode="write">✎ <span>Writing</span></button>
+      <button class="nav-item" data-mode="code">⌘ <span>Coding</span></button>
+      <button class="nav-item" data-mode="study">▤ <span>Study helper</span></button>
+      <button class="nav-item" data-mode="ideas">◇ <span>Ideas & planning</span></button>
+      <div class="side-label history-label">RECENT CHATS</div>
+      <div id="history" class="history"></div>
+      <div class="sidebar-bottom"><div class="status-dot"></div><span id="connection">Checking AI connection…</span></div>
+    </aside>
+    <main class="main">
+      <header class="topbar">
+        <button class="icon-btn mobile-menu" id="menuBtn" aria-label="Menu">☰</button>
+        <div class="top-title">TAZ AI <span class="model-pill">ASSISTANT</span></div>
+        <div class="top-actions"><button class="icon-btn" id="installBtn" hidden title="Install app">↓</button><button class="icon-btn" id="clearBtn" title="Clear chat">↻</button><div class="avatar">T</div></div>
+      </header>
+      <section class="chat-area" id="chatArea">
+        <div class="welcome" id="welcome">
+          <div class="welcome-orb"><span>✦</span></div>
+          <div class="eyebrow">WELCOME TO YOUR WORKSPACE</div>
+          <h1>Meet your new<br><span>AI sidekick.</span></h1>
+          <p>Ask anything, create something, or solve a problem.<br>What are we working on today?</p>
+          <div class="suggestions">
+            <button class="suggestion" data-prompt="Explain a difficult topic in simple Tamil."><b>▤</b><span><strong>Learn something</strong><small>Explain any topic simply</small></span><i>↗</i></button>
+            <button class="suggestion" data-prompt="Help me write a professional message."><b>✎</b><span><strong>Write anything</strong><small>Messages, essays and ideas</small></span><i>↗</i></button>
+            <button class="suggestion" data-prompt="Help me build a website step by step."><b>⌘</b><span><strong>Build a project</strong><small>Code and problem solving</small></span><i>↗</i></button>
+            <button class="suggestion" data-prompt="Create a practical plan for my goal."><b>◇</b><span><strong>Plan a goal</strong><small>Turn ideas into action</small></span><i>↗</i></button>
+          </div>
+        </div>
+        <div id="messages" class="messages"></div>
+      </section>
+      <footer class="composer-wrap">
+        <form id="chatForm" class="composer">
+          <textarea id="prompt" rows="1" placeholder="Message TAZ AI…" aria-label="Message TAZ AI"></textarea>
+          <div class="composer-tools"><div class="tool-hint">✦ <span>AI can make mistakes. Verify important information.</span></div><button class="send-btn" id="sendBtn" type="submit" aria-label="Send">↑</button></div>
+        </form>
+        <div class="footer-note">TAZ AI · Built for curious minds</div>
+      </footer>
+    </main>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>
